@@ -1,7 +1,7 @@
 {
   "name": "populateModelsSailsjs",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
@@ -21,7 +21,8 @@
     "include-all": "~0.1.6",
     "rc": "1.0.1",
     "sails": "~0.12.4",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "sails-mongo": "^0.12.2"
   },
   "scripts": {
     "debug": "node debug app.js",
@@ -32,6 +33,6 @@
     "type": "git",
     "url": "git://github.com/anonymous node/sails user/populateModelsSailsjs.git"
   },
-  "author": "anonymous node/sails user",
+  "author": "saul navarrov <sinavarrov@gmail.com>",
   "license": ""
 }

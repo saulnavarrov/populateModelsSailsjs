@@ -18,7 +18,7 @@
  * For more information on configuration, check out:
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.connections.html
  */
-
+var local = require('./local');
 module.exports.connections = {
 
   /***************************************************************************
@@ -58,11 +58,11 @@ module.exports.connections = {
   ***************************************************************************/
   someMongodbServer: {
     adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    user: 'username', //optional
-    password: 'password', //optional
-    database: 'your_mongo_db_name_here' //optional
+    host: local.mlabPruebas.url,
+    port: local.mlabPruebas.port,
+    user: local.mlabPruebas.username, //optional
+    password: local.mlabPruebas.password, //optional
+    database: local.mlabPruebas.database //optional
   },
 
   /***************************************************************************

@@ -1,0 +1,26 @@
+{
+  "name": "populatemodelssailsjs",
+  "description": "ejemplo basico de asociaciones de 1 a muchos",
+  "main": "app.js",
+  "authors": [
+    "saul navarrov <sinavarrov@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "saulnavarrov",
+    "sailsjs",
+    "mongodb",
+    "populate",
+    "1tomuchos",
+    "js"
+  ],
+  "homepage": "https://github.com/saulnavarrov/populateModelsSailsjs",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -6,9 +6,14 @@
  */
 
 module.exports = {
-
+  schema: true,
   attributes: {
-
+    nameCurso: {
+      type: 'string'
+    },
+    teacher: {
+      model: 'profesores'
+    }
   }
 };
 

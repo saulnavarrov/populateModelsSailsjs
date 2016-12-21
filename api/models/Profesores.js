@@ -6,9 +6,18 @@
  */
 
 module.exports = {
-
+  schema: true,
   attributes: {
-
+    name: {
+      type: 'string',
+    },
+    documentId: {
+      type: 'integer'
+    },
+    cursos: {
+      collection: 'cursos',
+      via: 'teacher'
+    }
   }
 };
 

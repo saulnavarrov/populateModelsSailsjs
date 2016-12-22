@@ -32,11 +32,10 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {view: 'homepage'},
 
-  '/profesores': {view: 'profores/index' },
-  '/cursos': {view: 'cursos/index' },
-  '/relacion': {view: 'relacion/index' },
+  '/pro': {view: 'profesores/index' },
+  '/cur': {view: 'cursos/index' },
+  '/': {view: 'relacion/index' },
 
 
   /***************************************************************************

@@ -25,17 +25,26 @@ $(function () {
       if(res.statusCode !== 200){
         console.error(res.error);
       }else{
+        // Para saber si no tienen profesores inscritos
+        if(!data.length){
+          relationTeacherCursos.html(`<p>No hay profesores Agregados</p>`);
+        }else{
+
+          // Inicio una lista
           relationTeacherCursos.html(`<ul id="listRel"></ul>`);
 
+          // Imprimo la lista de profesores
           data.forEach(itT => {
+            // Llamo la funcion de profesores
             printToDisplayDashboardList(itT);
 
-            console.log(itT.cursos);
+            // console.log(itT.cursos);
+            // Imprimo todos los cursos del profesor que tenga inscritos
             itT.cursos.forEach(itC => {
               printToDisplayDashboardListSub(itC, itT);
             });
-
-        });
+          });
+        }
       }
     });
   }
@@ -60,18 +69,19 @@ $(function () {
     let list = $(`li ul#listC-${dT.id}`);
     list.append(`<li id="liC-${dC.id}">${dC.nameCurso}</li>`);
   }
-});
 
-/**
- io.socket.request({
-      method: 'get',
-      url: `/api/colors?where={"selectForJob":true}`,
-      data: {}, headers: {'x-csrf-token': 'ji4brixbiub3', 'Authorization': 'Bearer ' + jwtToken,}
-    }, (data, res) => {
-      $('#listColorsDashBoard').html('');//Clear Display
-      $('#dashboarProgressColor').html('');
-      data.forEach((it, id) => {
-        setPrintDisplayColorsDashboard(it, id);
-      });
-    });
- */
+
+
+  // Iniciación de la lista en Profesores
+  if(urlPaths === '/pro'){
+    getListProfesoresSee();
+  }
+
+  /**
+   * [getListProfesoresSee description]
+   * @return {[type]} [description]
+   */
+  function getListProfesoresSee(){
+
+  }
+});
